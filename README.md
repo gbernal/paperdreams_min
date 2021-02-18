@@ -22,7 +22,7 @@ On Windows, we encountered an issue creating the 'en' link for spacy. To fix, re
 
 ### Warning: Large downloads!
 
-First we want to grab the svg data files the drawing assistant functunality.
+First we want to grab the svg data files for the drawing assistant functunality.
 
 Grab this folder https://drive.google.com/open?id=1848qA3FOfGm-uKVCG9nVIMTFm2mo6xdB
 
