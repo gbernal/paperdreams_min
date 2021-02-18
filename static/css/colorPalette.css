@@ -1,0 +1,297 @@
+#colordino{
+  position: absolute;
+  background-image: url(/static/images/swatches/model1-01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 2em;
+  height: 2em;
+  right: calc(23em + 0px);
+  bottom: calc(3.5em);
+}
+
+#colorfamily{
+ background-image: url(/static/images/swatches/model2-01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 2em;
+  height: 2em;
+  right: calc(26em + 0px);
+  bottom: calc(3.5em);
+}
+#colorflower{
+ background-image: url(/static/images/swatches/model3-01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 2em;
+  height: 2em;
+  right: calc(29em + 0px);
+  bottom: calc(3.5em);
+}
+#coloranimals{
+ background-image: url(/static/images/swatches/model4-01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 2em;
+  height: 2em;
+  right: calc(32em + 0px);
+  bottom: calc(3.5em);
+}
+#colorspaceships{
+ background-image: url(/static/images/swatches/model5-01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 2em;
+  height: 2em;
+  right: calc(35em + 0px);
+  bottom: calc(3.5em);
+}
+#colorbuildings{
+ background-image: url(/static/images/swatches/model6-01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 2em;
+  height: 2em;
+  right: calc(38em + 0px);
+  bottom: calc(3.5em);
+}
+#colorplants{
+ background-image: url(/static/images/swatches/model7-01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 2em;
+  height: 2em;
+  right: calc(41em + 0px);
+  bottom: calc(3.5em);
+}
+#colorschoolbus{
+ background-image: url(/static/images/swatches/model8-01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 2em;
+  height: 2em;
+  right: calc(44em + 0px);
+  bottom: calc(3.5em);
+}
+
+#colorlandscape{
+ background-image: url(/static/images/swatches/model8-01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 2em;
+  height: 2em;
+  right: calc(23em + 0px);
+  bottom: calc(1em);
+}
+
+#colorfruit{
+ background-image: url(/static/images/swatches/model8-01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 2em;
+  height: 2em;
+  right: calc(26em + 0px);
+  bottom: calc(1em);
+}
+
+#colorrandom{
+ background-image: url(/static/images/swatches/model8-01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 2em;
+  height: 2em;
+  right: calc(29em + 0px);
+  bottom: calc(1em);
+}
+
+#coloranimals_BW{
+ background-image: url(/static/images/swatches/model8-01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 2em;
+  height: 2em;
+  right: calc(29em + 0px);
+  bottom: calc(1em);
+}
+
+#colorfish{
+ background-image: url(/static/images/swatches/model8-01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 2em;
+  height: 2em;
+  right: calc(32em + 0px);
+  bottom: calc(1em);
+}
+
+#colorbird{
+ background-image: url(/static/images/swatches/model8-01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 2em;
+  height: 2em;
+  right: calc(35em + 0px);
+  bottom: calc(1em);
+}
+
+#colortransportation{
+ background-image: url(/static/images/swatches/model8-01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 2em;
+  height: 2em;
+  right: calc(38em + 0px);
+  bottom: calc(1em);
+}
+
+#colorairplanesNormals{
+ background-image: url(/static/images/swatches/model8-01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 2em;
+  height: 2em;
+  right: calc(41em + 0px);
+  bottom: calc(1em);
+}
+
+#colorcarsNormals{
+ background-image: url(/static/images/swatches/model8-01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 2em;
+  height: 2em;
+  right: calc(44em + 0px);
+  bottom: calc(1em);
+}
+
+#colorcarsDepth{
+ background-image: url(/static/images/swatches/model8-01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 2em;
+  height: 2em;
+  right: calc(47em + 0px);
+  bottom: calc(1em);
+}
+
+#coloranimalsBW2{
+ background-image: url(/static/images/swatches/model8-01.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 2em;
+  height: 2em;
+  right: calc(50em + 0px);
+  bottom: calc(1em);
+}

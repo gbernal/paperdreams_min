@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Paper Dreams</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" type="text/css" href="/static/css/serendipity.css">
+  </head>
+  <body>
+    <div id="cont">
+      <div id="a" class="c_style">
+        <button type="button" onclick="cleary()" title="Clear" id="clear-button" >clear</button>
+        <div id="a_left">
+        </div>
+        <button type="button" onclick="undo()" title="Undo" id="undo-button"></button>
+        <button type="button" onclick="redo()" title="Redo" id="redo-button"></button>
+        <a href="/storyboard" target="_blank">
+          <button type="button" id="storyboard-button" title="Go to Storyboard"> storyboard </button>
+        </a>
+        <div id="wheelDiv" class="wheelNav"></div>
+        <div id="a_right">
+          <div class="a_right_spacing"></div>
+          <button type="button" class="a_right_butt" title="Get Inspiration" onclick="getinspiration()" id="inspiration"></button>
+          <button type="button" class="a_right_butt" title="Change Draw Placement" onclick="toggledrawButton();" id="toggledraw"></button>
+          <button type="button" class="a_right_butt" title="Add New Object" onclick="changelayerButton();" id="changelayer"></button>
+          <button type="button" class="a_right_butt" title="Color / Texturize" onclick="colorButtonStateChange()" id="colorimage"></button>
+          <button type="button" class="a_right_butt" title="Download Image" onclick="realdownloadimage()" id="down"></button>
+
+          <div class="palette-case" style="display: none;">
+            <div class="palette" onmousedown="selectColor(this)" style="background-color: #000000; border-style: solid;"></div>
+            <div class="palette" onmousedown="selectColor(this)" style="background-color: #0e0e0e; border-style: solid;"></div>
+            <div class="palette" onmousedown="selectColor(this)" style="background-color: #3a3a3a; border-style: solid;"></div>
+            <div class="palette" onmousedown="selectColor(this)" style="background-color: #818181; border-style: solid;"></div>
+            <div class="palette" onmousedown="selectColor(this)" style="background-color: #b8b8b8; border-style: solid;"></div>
+            <div class="palette" onmousedown="selectColor(this)" style="background-color: #f0f0f0; border-style: solid;"></div>
+          </div>
+
+          <div class="slidecontainer" style="display: none;">
+            <input type="range" class="slider" min="1" max="10" value="2" data-orientation="vertical" id="thickness">
+          </div>
+
+        </div>
+      </div>
+      <div id="b" class="c_style">
+        <h1>Inspiration</h1>
+        <div id="recognizedword" title="Recognized Object" > </div>
+          <form id="rename_object_form" style="visibility: hidden;" onsubmit = "event.preventDefault(); renameObject();" style = "visibility: hidden;">
+{#             <div class = "popup"></div>#}
+             <input name = "rename_object_input" id="rename_object_input" title="Rename your object if misclassified"
+                                 type="text"  placeholder='If wrong, please rename' autocomplete="off" style = "display: inline-block;"
+                                 data-toggle="popover" data-container = "body" data-placement="left" data-header=""
+                                 data-content="Please rename the class of your object if it is misclassified" />
+
+       </form>
+        <div id="words" title="Click to View Drawings"> </div>
+        <div id="svg_grid" title="Click to Draw"> </div>
+        <div id="logoimagediv">
+          <a href="https://www.media.mit.edu/projects/paper-dreams/overview/">
+            <img id="MLlogo" src="/static/images/logo.jpg" title="Go To Project Page" width="180" height="39">
+          </a>
+        </div>
+      </div>
+
+
+
+      <div id="c" class="c_style">
+        <form id="user_text_form">
+          <input name ="user_text_input" id="user_text_input" title="Speak or Type to Enter Text" type="text"  placeholder='Background Description, i.e. "misty forest"' />
+        </form>
+        <div class="right">
+          <button id="start_button" onclick="startButton(event)">
+          <img id="start_img" src="/static/images/gif/mic.gif" alt="Start"></button>
+        </div>
+
+        <div id="loading_box" class="loading">
+            <h3>drawing now</h3>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="/static/js/lib/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/lib/canvasStack1v06.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script language="javascript" type="text/javascript" src="/static/js/lib/p5.js"></script>
+    <script language="javascript" type="text/javascript" src="/static/js/lib/numjs.js"></script>
+    <script language="javascript" type="text/javascript" src="/static/js/lib/p5.svg.js"></script>
+    <script type="text/javascript" src="/static/js/lib/wheelnav/raphael.min.js"></script>
+    <script type="text/javascript" src="/static/js/lib/wheelnav/raphael.icons.min.js"></script>
+    <script type="text/javascript" src="/static/js/lib/wheelnav/wheelnav.js"></script>
+    <script type="text/javascript" src="/static/js/serendipity.js"></script>
+    <script type="text/javascript" src="/static/js/speech-to-text.js"></script>
+    <script type="text/javascript" src="/static/js/inspirationbutton.js"></script>
+    <script type="text/javascript" src="/static/js/wheel.js"></script>
+    <script type="text/javascript" src="/static/js/filters.js"></script>
+    <script type="text/javascript" src="/static/js/downloadandcolor.js"></script>
+    <script type="text/javascript" src="/static/js/undoredoclear.js"></script>
+    <script type="text/javascript" src="/static/js/drawobject.js"></script>
+    <script type="text/javascript" src="/static/js/drawsvg.js"></script>
+    <script type="text/javascript" src="/static/js/modelchange.js"></script>
+    <script type="text/javascript" src="/static/js/updategrid.js"></script>
+    <script type="text/javascript" src="/static/js/downloadbutton.js"></script>
+    <script type="text/javascript" src="/static/js/colorbutton.js"></script>
+    <script type="text/javascript" src="/static/js/newobjectfront.js"></script>
+    <script type="text/javascript" src="/static/js/toggledraw.js"></script>
+    <script type="text/javascript" src="/static/js/paletteoptions.js"></script>
+  </body>
+</html>

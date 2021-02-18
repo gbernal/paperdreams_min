@@ -1,0 +1,504 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #686868;
+}
+
+#cont {
+  /* meh */
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+
+  /* relevant */
+  display: grid;
+  grid-template-columns: [big-start] auto [big-end] 20em [right];
+  grid-template-rows: [top] 85% [mid] 15% [bot];
+}
+
+#a {
+  /* meh */
+  margin: 1em;
+
+  /* relevant */
+  grid-column-start: big-start;
+  grid-column-end: span big-end;
+  grid-row-start: top;
+  grid-row-end: span mid;
+
+  /* for items within */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+#a > #a_right {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.a_right_spacing {
+  height: calc(100% - 20em);
+}
+
+.a_right_butt {
+  border-radius: 100%;
+  border: 1px black;
+  margin: 10px;
+  width: 4em;
+  height: 4em;
+  text-align: center;
+}
+
+#a > #a_left {
+  border: 1px solid #c6c6c6;
+  border-radius: 0.5em;
+  margin: 5px;
+  flex-grow: 9;
+
+}
+
+#wheelDiv{
+  position: absolute;
+  right: calc(20em - 47.5px);
+  top: calc((85% - 20em)/ 2 - 150px);
+  height: 200px;
+  width: 200px;
+  z-index: 8;
+}
+
+.palette-case {
+  text-align:center;
+}
+.palette {
+    display:block;
+    border:2px solid #777;
+    height:36px;
+    width:36px;
+    border-radius: 50%;
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100px; /* Full-width */
+    height: 15px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    margin-top: 50px;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    background: #393c42; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+input[type="range"] {
+   transform: rotateZ(270deg);
+}
+
+#b {
+  /* meh */
+  background-color: white;
+  margin: 1em 1em 1em 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 3.8em;
+  padding-right: 3.8em;
+
+  /* relevant */
+  grid-column-start: big-end;
+  grid-column-end: span right;
+  grid-row-start: top;
+  grid-row-end: span bot;
+
+  /* for items within */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#b > h1 {
+  align-self: center;
+}
+
+#b > h4 {
+  /* margin: 0.5em; */
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+#c {
+  /* meh */
+  margin: 0 1em 1em;
+  padding: 1em;
+
+  /* relevant */
+  grid-column-start: big-start;
+  grid-column-end: span big-end;
+  grid-row-start: mid;
+  grid-row-end: span bot;
+}
+
+.c_style {
+  font-family: 'Montserrat', sans-serif;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 3px #e5e5e5;
+}
+
+.p_style {
+  font-family: 'Montserrat', sans-serif;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+#down{
+  background-image: url(/static/images/assets/downloadbutton.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#pallette{
+  background-image: url(/static/images/swatches/colorswatch.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#colorimage{
+  background-image: url(/static/images/assets/colorbutton.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#inspiration{
+  background-image: url(/static/images/assets/inspirationbutton.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#changelayer{
+  background-image: url(/static/images/assets/newobjectbutton.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#toggledraw{
+  background-image: url(/static/images/assets/toggledrawfront.png);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.selected_button{
+  /*border: solid #FFd800;*/
+  /*border-width: 2px;*/
+  outline: 2px solid #FFd800;
+}
+
+#clear-button{
+  position: fixed;
+  bottom: calc(15% + 1em);
+  z-index: 2;
+  color: #686868;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 100;
+  margin: 10px;
+  width: 4em;
+  height: 2em;
+  text-align: center;
+}
+
+#undo-button{
+  background-image: url(/static/images/assets/undobutton.png);
+  /*filter: opacity(0.5);*/
+  box-shadow: none; !important;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  border: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 4em;
+  height: 2em;
+  z-indez: 1000;
+  -webkit-box-shadow:none;
+  -mov-box-shadow:none;
+}
+
+#redo-button{
+  background-image: url(/static/images/assets/redobutton.png);
+  /*filter: opacity(0.5);*/
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  border: 0;
+  left: calc(4em + 1.5em);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 4em;
+  height: 2em;
+  z-indez: 1000;
+  -webkit-box-shadow:none;
+  -moz-box-shadow: none;
+  -box-shadow:none;
+}
+
+#storyboard-button{
+  position: absolute;
+  right: calc(20em + 6em);
+  background: transparent;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 6em;
+  height: 2em;
+  color: #686868;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+
+#rename_object_button{
+  background-color: white;
+  border: solid #FFd800;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+h1{
+  font-size: 40px;
+  font-weight: 100;
+  z-index: 10;
+}
+
+h2{
+  font-size: 24px;
+  font-weight: 400;
+  z-index: 10;
+}
+
+h3 {
+  color: rgba(12, 138, 102, 0.96);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+h4{
+  font-size: 16px;
+  font-weight: 100;
+  z-index: 10;
+}
+
+h2:hover{
+  cursor: pointer;
+}
+
+h4:hover{
+  cursor: pointer;
+}
+
+
+#rename_object_input{
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*box-sizing: border-box;*/
+  border-color: #FFd800;
+  border-radius: 5px;
+  border-style:solid;
+  padding: 5px;
+  font-size: 16px;
+
+}
+
+/*#rename_object_input:focus{*/
+/*  outline: none;*/
+/*  box-shadow: none;*/
+/*}*/
+
+#user_text_input {
+  width: 80%;
+  height: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: none;
+  font-size: 24px;
+}
+
+
+
+input[type=text] {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: none;
+  font-size: 24px;
+}
+
+#user_text_form {
+  float: left;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: none;
+  font-size: 24px;
+  margin-right: -200px;
+}
+
+#loading_box {
+  text-align: center;
+  position: absolute;
+  left: calc(40% - 1em - 100px);
+  top: calc(1.5em);
+  padding:1em;
+  height: calc(15% - 3em);
+  width: 200px;
+  display: none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #c4c4c4;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+
+}
+
+#logoimagediv {
+  position: fixed;
+  bottom: calc(20px + 1em - 8px);
+}
+
+
+#svg_grid {
+  flex-flow: row wrap;
+  display: flex;
+  background-color: #efefef;
+  padding: 0.1em;
+}
+
+.svg_image {
+  height: calc((10.45em)/2);
+  width: calc((10.45em)/2);
+  background-color: white;
+  margin: 3px;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.svg_image:hover{
+  cursor: pointer;
+}
+
+.selected_svg_image {
+  margin: 0px;
+  border-width: 3px;
+  border: solid #FFd800;
+}
+
+#MLlogo{
+  filter: invert(0.2);
+}
+
+/*
+ * Loading Dots
+ * Can we use pseudo elements here instead :after?
+ */
+.loading span {
+  display: inline-block;
+  vertical-align: middle;
+  width: .6em;
+  height: .6em;
+  margin: .19em;
+  background: #007DB6;
+  border-radius: .6em;
+  animation: loading 1s infinite alternate;
+}
+
+/*
+ * Dots Colors
+ * Smarter targeting vs nth-of-type?
+ */
+.loading span:nth-of-type(2) {
+  background: #f72c00;
+  animation-delay: 0.2s;
+}
+.loading span:nth-of-type(3) {
+  background: #ee4700;
+  animation-delay: 0.4s;
+}
+.loading span:nth-of-type(4) {
+  background: #eb9c09;
+  animation-delay: 0.6s;
+}
+.loading span:nth-of-type(5) {
+  background: #ff9d00;
+  animation-delay: 0.8s;
+}
+.loading span:nth-of-type(6) {
+  background: #ffe900;
+  animation-delay: 1.0s;
+}
+.loading span:nth-of-type(7) {
+  background: #f5ff00;
+  animation-delay: 1.2s;
+}
+
+/*
+ * Animation keyframes
+ * Use transition opacity instead of keyframes?
+ */
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.final {
+    color: black;
+    padding-right: 3px;
+  }
+  .interim {
+    color: gray;
+  }
+  .right {
+    float: right;
+  }
+  #start_button {
+    border: 0;
+    background-color:transparent;
+    padding: 0;
+  }
