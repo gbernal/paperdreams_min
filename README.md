@@ -1,4 +1,4 @@
-# Paper Dreams Demo Repo
+# Paper Dreams Demo Repo for sharable code
 
 The files in this repo should allow you install a working demo for the paper dreams project
 ## Getting Started
@@ -26,30 +26,19 @@ First we want to grab the svg data files the drawing assistant functunality.
 
 Grab this folder https://drive.google.com/open?id=1848qA3FOfGm-uKVCG9nVIMTFm2mo6xdB
 
-and put it inside the static folder.
+and put it inside the static folder > Images.
 
 Once that is done, download the GAN models from here https://drive.google.com/open?id=1IyNQ3L67FwH2D3A3f3O-_Z_TnAVLynec
 
-and add the checkpoints folder to the pix2pixHDmin folder
+and add the checkpoints folder to the pix2pixHD folder
 
-### Adjusting a path for you
-If you are not using Pycharm you need to change this line of code in the file runPix2pixHD.sh from 
-```
-python ~/PycharmProjects/PaperDreamsWorkingDemo/pix2pixHDmin/pix2pix_test_realtime.py --label_nc 0 --no_instance --gpu_ids 0 
-```
-to 
 
-```
-python <Your/Path/Directory>/PaperDreamsWorkingDemo/pix2pixHDmin/pix2pix_test_realtime.py --label_nc 0 --no_instance --gpu_ids 0 
-```
-If you are using a machine with more than one GPU you can use gpu_ids from zero to 1 or however many GPUs you have in your machine.
-## You need to make sure that you own runPix2pixHD.sh file and that it can be run by you for this you need to run the command below.
 
-chmod +x runPix2pixHD.sh
+
 
 ## Running the project.
 
-from the main directory run __init__.py 
+from the root directory run the command `python __init__.py run`
 
 
 ## Authors
