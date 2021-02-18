@@ -26,7 +26,7 @@ First we want to grab the svg data files the drawing assistant functunality.
 
 Grab this folder https://drive.google.com/open?id=1848qA3FOfGm-uKVCG9nVIMTFm2mo6xdB
 
-and put it inside the static folder > Images.
+and put it inside the static > images.
 
 Once that is done, download the GAN models from here https://drive.google.com/open?id=1IyNQ3L67FwH2D3A3f3O-_Z_TnAVLynec
 
