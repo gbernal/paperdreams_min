@@ -1,4 +1,4 @@
-# Paper Dreams Demo Repo for sharable code
+# Paper Dreams Demo Repo for shareable code
 
 The files in this repo should allow you install a working demo for the paper dreams project
 ## Getting Started
