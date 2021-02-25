@@ -33,8 +33,12 @@ Once that is done, download the GAN models from here https://drive.google.com/op
 and add the checkpoints folder to the pix2pixHD folder
 
 
+## Notes
+In the case that you are trying to run the web app on monitors that have high resolution display 
+(Over 1920x1080) you might want to modify these lines of code. you can start by removing the division by two
 
-
+https://github.com/gbernal/paperdreams_min/blob/a22ba7f7478b7ad42f081e593ad538b547f6def4/static/js/downloadandcolor.js#L207
+https://github.com/gbernal/paperdreams_min/blob/a22ba7f7478b7ad42f081e593ad538b547f6def4/static/js/downloadandcolor.js#L212
 
 ## Running the project.
 
