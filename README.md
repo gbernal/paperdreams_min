@@ -59,4 +59,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Danny and Allan Gelman -- Explarations for use cases and 3d applications
+* Danny and Allan Gelman -- explorations for use cases and 3d applications
